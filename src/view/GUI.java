@@ -26,6 +26,8 @@ public class GUI {
 		createTextArea();
 		createMenuBar();
 		createFileMenu();
+		FunctionFile functionFile = new FunctionFile(this);
+		setFile(functionFile);
 		window.setVisible(true);
 
 	}
@@ -36,6 +38,14 @@ public class GUI {
 
 	public JTextArea getTextArea() {
 		return textArea;
+	}
+
+	public FunctionFile getFile() {
+		return file;
+	}
+
+	public void setFile(FunctionFile file) {
+		this.file = file;
 	}
 
 	private void createWindow() {
